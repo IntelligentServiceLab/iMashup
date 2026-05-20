@@ -247,4 +247,4 @@ API 推荐服务代码。
 5. 启动 iMashup_front
 
 #### Contact
-Email: 1400304200@qq.com (马嘉浩), 2085417395@qq.com (鲁晓荣)
+Email: 1400304200@qq.com (马嘉浩), 2085417395@qq.com (鲁晓蓉)
