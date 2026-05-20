@@ -1,22 +1,24 @@
 # iMashup
-# iMashup
 
 基于大模型的智能化 Mashup 应用开发工具。
 
----
+## 目录
 
-# 目录
+1. **[项目简介](#项目简介)**
+2. **[功能特性](#功能特性)**
+3. **[技术栈](#技术栈)**
 
-1. **[数据集简介](#数据集简介)**
-2. **[软件包说明](#软件包说明)**
-3. **[代码使用说明](#代码使用说明)**
+- **[前端](#前端)**
+- **[后端](#后端)**
+- **[推荐服务](#推荐服务)**
 
-- **[项目结构](#项目结构)**
-- **[核心代码](#核心代码)**
-- **[结果保存](#结果保存)**
+4. **[项目文件说明](#项目文件说明)**
 
-4. **[数据集字段说明](#数据集字段说明)**
-5. **[API 调用及组合示例](5-API调用及组合示例)**
+- **[iMashup_front](#iMashup_front)**
+- **[iMashup_backend](#iMashup_backend)**
+- **[iMashup_service](#iMashup_service)**
+
+5. **[项目启动顺序](#项目启动顺序)**
 
 ---
 
@@ -35,7 +37,7 @@ iMashup 是一个结合大语言模型、低代码开发与 Mashup 服务组合�
 
 ---
 
-# 功能特性
+## 功能特性
 
 * 可视化工作流编排
 * 节点拖拽与连接
@@ -49,9 +51,9 @@ iMashup 是一个结合大语言模型、低代码开发与 Mashup 服务组合�
 
 ---
 
-# 技术栈
+## 技术栈
 
-## 前端
+### 前端
 
 * React
 * TypeScript
@@ -59,7 +61,7 @@ iMashup 是一个结合大语言模型、低代码开发与 Mashup 服务组合�
 * Ant Design
 * Vite
 
-## 后端
+### 后端
 
 * Spring Boot
 * Maven
@@ -67,7 +69,7 @@ iMashup 是一个结合大语言模型、低代码开发与 Mashup 服务组合�
 * Redis
 * MySQL
 
-## AI / 推荐服务
+### 推荐服务
 
 * Flask
 * Sentence-Transformers
@@ -77,33 +79,33 @@ iMashup 是一个结合大语言模型、低代码开发与 Mashup 服务组合�
 
 ---
 
-# 项目文件说明
+## 项目文件说明
 
 本仓库包含 iMashup 工具的完整代码及数据库文件。
 
 ---
 
-## 1. iMashup_front
+### 1. iMashup_front
 
 前端代码目录。
 
-### 运行方式
+#### 运行方式
 
 推荐使用 VSCode 运行
 
-### 安装依赖
+#### 安装依赖
 
 ```bash
 npm install
 ```
 
-### 启动项目
+#### 启动项目
 
 ```bash
 npm run dev
 ```
 
-### 前端技术
+#### 前端技术
 
 * React
 * TypeScript
@@ -113,7 +115,7 @@ npm run dev
 
 ---
 
-## 2. iMashup_backend
+### 2. iMashup_backend
 
 后端代码目录。
 
@@ -122,15 +124,15 @@ npm run dev
 * Spring Boot
 * Maven
 
-### 代码环境
+#### 代码环境
 
 * JDK 17
 
-### 启动方式
+#### 启动方式
 
 可通过 IntelliJ IDEA 启动 Spring Boot 项目。
 
-### 后端功能
+#### 后端功能
 
 * 用户登录注册
 * 工作流管理
@@ -141,13 +143,13 @@ npm run dev
 
 ---
 
-## 3. iMashup_service
+### 3. iMashup_service
 
 API 推荐与大模型相关代码目录。
 
-### 目录说明
+#### 目录说明
 
-#### models/sentence-transformers/all-MiniLM-L6-v2
+##### models/sentence-transformers/all-MiniLM-L6-v2
 
 用于 API 推荐功能的语义向量模型。
 
@@ -158,7 +160,7 @@ API 推荐与大模型相关代码目录。
 * 相似度计算
 * 语义检索
 
-#### ServiceDiscovery
+##### ServiceDiscovery
 
 API 推荐服务代码。
 
@@ -170,7 +172,7 @@ API 推荐服务代码。
 * API 推荐
 * RAG 相关逻辑
 
-### 相关技术
+#### 相关技术
 
 * Flask
 * Sentence-Transformers
@@ -178,15 +180,15 @@ API 推荐服务代码。
 
 ---
 
-## 4. iMashup_data
+### 4. iMashup_data
 
 项目所使用的 MySQL 数据库文件。
 
-### 使用方式
+#### 使用方式
 
 可直接通过 MySQL Workbench 或 MySQL 命令行导入。
 
-### 注意事项
+#### 注意事项
 
 导入数据库后，需要保证后端配置文件中的：
 
@@ -198,13 +200,13 @@ API 推荐服务代码。
 
 ---
 
-# 系统特点
+## 系统特点
 
-## 可视化低代码开发
+### 可视化低代码开发
 
 用户可通过拖拽节点快速构建 API 工作流。
 
-## 大模型智能推荐
+### 大模型智能推荐
 
 结合 LLM 与 RAG 技术，实现：
 
@@ -212,7 +214,7 @@ API 推荐服务代码。
 * 子任务划分
 * API 智能推荐
 
-## 服务组合自动化
+### 服务组合自动化
 
 自动完成：
 
@@ -220,7 +222,7 @@ API 推荐服务代码。
 * 节点生成
 * 流程构建
 
-## 工作流持久化
+### 工作流持久化
 
 支持：
 
@@ -230,23 +232,25 @@ API 推荐服务代码。
 
 ---
 
-# 环境要求
+### 环境要求
 
-## 前端
+### 前端
 
 * Node.js 18+
+推荐：
+21.1.0
 * npm
 
-## 后端
+### 后端
 
 * JDK 17
 * Maven
 
-## 数据库
+### 数据库
 
 * MySQL 8+
 
-## Python
+### Python
 
 推荐：
 
@@ -254,7 +258,7 @@ API 推荐服务代码。
 
 ---
 
-# 项目启动顺序
+## 项目启动顺序
 
 建议按照以下顺序启动：
 
@@ -266,10 +270,4 @@ API 推荐服务代码。
 
 ---
 
-# License
-
-This project is for academic and research purposes.
-
----
-
-# 
+#### Contact
