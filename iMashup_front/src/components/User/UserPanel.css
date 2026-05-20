@@ -1,0 +1,247 @@
+.user-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.user-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.user-panel-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-panel-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2a44;
+}
+
+.user-panel-subtitle {
+  font-size: 13px;
+  color: #8a97b2;
+}
+
+.user-panel-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(124, 141, 181, 0.16);
+  border-radius: 16px;
+  padding: 0 16px;
+}
+
+.user-panel-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(124, 141, 181, 0.12);
+}
+
+.user-panel-row:last-child {
+  border-bottom: none;
+}
+
+.history-list-page {
+  padding: 4px 0 8px;
+}
+
+.history-list-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 12px;
+  padding: 0 4px;
+}
+
+.history-list-item {
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 10px 12px !important;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.history-list-item:hover {
+  background: #f5f7fb;
+}
+
+.history-item-main {
+  width: 100%;
+  overflow: hidden;
+}
+
+.history-item-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111827;
+  line-height: 1.5;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-item-desc {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.history-loading,
+.history-empty {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.session-list {
+  min-height: 420px;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.input-area {
+  margin-top: 16px;
+  border-top: 1px solid #edf1f5;
+  padding-top: 14px;
+  background: #fff;
+}
+
+.input-buttons {
+  margin-top: 10px;
+}
+
+.session-item.user .message-content,
+.session-item.ai .message-content {
+  word-break: break-word;
+}
+
+.session-card {
+  border-radius: 14px;
+}
+
+.card-content {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.card-options {
+  margin-top: 8px;
+}
+
+.user-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.user-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.user-panel-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.user-panel-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.user-panel-subtitle {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.user-panel-card {
+  background: #f8fafc;
+  border: 1px solid #e8eef5;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.user-panel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.user-panel-row .label {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.user-panel-row .value {
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.user-history-section {
+  background: #ffffff;
+  border: 1px solid #e8eef5;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.user-history-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.user-history-empty {
+  padding: 8px 0;
+}
+
+.user-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 320px;
+  overflow-y: auto;
+}
+
+.user-history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #edf2f7;
+  border-radius: 12px;
+  background: #f8fbff;
+}
+
+.user-history-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.user-history-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f172a;
+  word-break: break-all;
+}
+
+.user-history-time {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #94a3b8;
+}
