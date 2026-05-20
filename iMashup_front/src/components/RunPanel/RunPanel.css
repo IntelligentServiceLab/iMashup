@@ -1,0 +1,130 @@
+.workflow-drawer .ant-drawer-content {
+  background: linear-gradient(180deg, #fafdff 0%, #f4f8ff 100%);
+}
+
+.workflow-drawer .ant-drawer-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(128, 146, 186, 0.14);
+  padding: 20px 24px 16px;
+}
+
+.workflow-drawer .ant-drawer-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.workflow-drawer .ant-drawer-body {
+  padding: 20px 24px 24px;
+}
+
+.drawer-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.drawer-section-header-output {
+  margin-bottom: 14px;
+}
+
+.drawer-section-title {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.drawer-field-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(131, 149, 189, 0.12);
+  box-shadow: var(--shadow-soft);
+}
+
+.drawer-field-meta {
+  width: 120px;
+  flex-shrink: 0;
+}
+
+.drawer-field-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 40px;
+}
+
+.drawer-field-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+.drawer-field-type-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 0 7px;
+  border-radius: 999px;
+  background: rgba(76, 132, 255, 0.08);
+  border: 1px solid rgba(76, 132, 255, 0.14);
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-soft);
+  line-height: 1;
+}
+
+.drawer-textarea.ant-input {
+  border-radius: 14px;
+  border: 1px solid rgba(129, 148, 190, 0.18);
+  background: rgba(249, 251, 255, 0.96);
+  line-height: 1.5;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.drawer-textarea.ant-input:hover {
+  border-color: rgba(76, 132, 255, 0.28);
+}
+
+.drawer-textarea.ant-input:focus,
+.drawer-textarea.ant-input-focused {
+  border-color: rgba(76, 132, 255, 0.42);
+  box-shadow: 0 0 0 4px rgba(76, 132, 255, 0.1);
+  background: #ffffff;
+}
+
+.drawer-textarea.ant-input[disabled],
+.drawer-textarea.ant-input:disabled {
+  color: var(--text-main);
+  background: rgba(244, 247, 252, 0.96);
+}
+
+.drawer-separator {
+  margin: 18px 0 18px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(129, 148, 190, 0),
+    rgba(129, 148, 190, 0.3),
+    rgba(129, 148, 190, 0)
+  );
+}
+
+.workflow-drawer .toolbar-btn.success-action.ant-btn {
+  background: linear-gradient(135deg, #4c84ff, #2f6fff);
+  border-color: transparent;
+  box-shadow: 0 10px 20px rgba(76, 132, 255, 0.18);
+}
+
+.workflow-drawer .toolbar-btn.success-action.ant-btn:hover {
+  background: linear-gradient(135deg, #5a8dff, #3d77ff);
+}
