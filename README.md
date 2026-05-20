@@ -140,7 +140,7 @@ API 推荐与大模型相关代码目录。
 
 #### 目录说明
 
-##### models/sentence-transformers/all-MiniLM-L6-v2
+##### * models/sentence-transformers/all-MiniLM-L6-v2
 
 用于 API 推荐功能的语义向量模型。
 
@@ -151,7 +151,7 @@ API 推荐与大模型相关代码目录。
 * 相似度计算
 * 语义检索
 
-##### ServiceDiscovery
+##### * ServiceDiscovery
 
 API 推荐服务代码。
 
