@@ -82,7 +82,8 @@ iMashup 是一个结合大语言模型、低代码开发与 Mashup 服务组合�
 
 本仓库包含 iMashup 工具的完整代码及数据库文件。
 
-### 1. iMashup_front —— 前端代码
+### 1. iMashup_front
+前端代码目录
 
 #### 运行方式
 
@@ -108,9 +109,8 @@ npm run dev
 * Ant Design
 * Vite
 
-### 2. iMashup_backend —— 后端代码
-
-后端代码目录。
+### 2. iMashup_backend
+后端代码目录
 
 项目采用：
 
@@ -134,7 +134,7 @@ npm run dev
 * 会话管理
 * 与 Python 推荐服务通信
 
-### 3. iMashup_service —— 服务推荐代码
+### 3. iMashup_service —— 
 
 API 推荐与大模型相关代码目录。
 
@@ -169,8 +169,7 @@ API 推荐服务代码。
 * Sentence-Transformers
 * FAISS
 
-### 4. iMashup_data —— 数据库 SQL 代码
-
+### 4. iMashup_data 
 项目所使用的 MySQL 数据库文件。
 
 #### 使用方式
