@@ -1,0 +1,13 @@
+#采用虚拟环境
+1.创建虚拟环境
+py -3.10 -m venv venv
+
+2.加载虚拟环境
+venv\Scripts\activate(cmd)
+
+3.加载虚拟环境
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
+venv\Scripts\Activate.ps1(PowerShell)
+
+#下载模型到本地
+hf download --resume-download 模型名称
