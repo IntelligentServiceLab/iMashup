@@ -1,0 +1,78 @@
+.workflow-modal .ant-modal-content {
+  border-radius: 24px;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 255, 0.94));
+  border: 1px solid rgba(129, 148, 190, 0.14);
+  box-shadow:
+    0 30px 80px rgba(27, 46, 88, 0.16),
+    0 10px 30px rgba(27, 46, 88, 0.10);
+}
+
+.workflow-modal .ant-modal-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(129, 148, 190, 0.12);
+  padding: 22px 24px 16px;
+  margin-bottom: 0;
+}
+
+.workflow-modal .ant-modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.workflow-modal .ant-modal-body {
+  padding: 20px 24px 18px;
+}
+
+.workflow-modal .ant-modal-footer {
+  padding: 0 24px 22px;
+  margin-top: 0;
+}
+
+.workflow-modal .ant-input {
+  height: 46px;
+  border-radius: 14px;
+  border: 1px solid rgba(129, 148, 190, 0.18);
+  background: rgba(250, 251, 255, 0.96);
+}
+
+.workflow-modal .ant-input:focus,
+.workflow-modal .ant-input-focused {
+  border-color: rgba(76, 132, 255, 0.42);
+  box-shadow: 0 0 0 4px rgba(76, 132, 255, 0.10);
+}
+
+.workflow-modal .ant-btn {
+  height: 40px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.workflow-modal .ant-btn-primary {
+  background: linear-gradient(135deg, #4c84ff 0%, #2f6fff 100%);
+  border: none;
+  box-shadow: var(--shadow-button);
+}
+
+.export-id-box {
+  border-radius: 16px;
+  padding: 14px 16px;
+  background: rgba(248, 250, 255, 0.94);
+  border: 1px dashed rgba(114, 132, 174, 0.28);
+}
+
+.export-id-title {
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: var(--text-soft);
+}
+
+.export-id-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-strong);
+  letter-spacing: 0.02em;
+  word-break: break-all;
+}

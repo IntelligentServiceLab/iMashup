@@ -1,0 +1,22 @@
+// vite.config.ts
+import { defineConfig } from "file:///D:/20250601/combination-tools/node_modules/vite/dist/node/index.js";
+import zipPack from "file:///D:/20250601/combination-tools/node_modules/vite-plugin-zip-pack/dist/esm/index.mjs";
+import react from "file:///D:/20250601/combination-tools/node_modules/@vitejs/plugin-react/dist/index.mjs";
+var vite_config_default = defineConfig({
+  plugins: [
+    react(),
+    zipPack({
+      inDir: "dist",
+      // 输入的文件夹，就是要打包的文件夹
+      outDir: "archive",
+      // 打包好的 zip 文件放到哪个文件夹下
+      outFileName: `diary-20250423.zip`,
+      // 打包好的文件名
+      pathPrefix: ""
+    })
+  ]
+});
+export {
+  vite_config_default as default
+};
+//# sourceMappingURL=data:application/json;base64,ewogICJ2ZXJzaW9uIjogMywKICAic291cmNlcyI6IFsidml0ZS5jb25maWcudHMiXSwKICAic291cmNlc0NvbnRlbnQiOiBbImNvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9kaXJuYW1lID0gXCJEOlxcXFwyMDI1MDYwMVxcXFxjb21iaW5hdGlvbi10b29sc1wiO2NvbnN0IF9fdml0ZV9pbmplY3RlZF9vcmlnaW5hbF9maWxlbmFtZSA9IFwiRDpcXFxcMjAyNTA2MDFcXFxcY29tYmluYXRpb24tdG9vbHNcXFxcdml0ZS5jb25maWcudHNcIjtjb25zdCBfX3ZpdGVfaW5qZWN0ZWRfb3JpZ2luYWxfaW1wb3J0X21ldGFfdXJsID0gXCJmaWxlOi8vL0Q6LzIwMjUwNjAxL2NvbWJpbmF0aW9uLXRvb2xzL3ZpdGUuY29uZmlnLnRzXCI7aW1wb3J0IHsgZGVmaW5lQ29uZmlnIH0gZnJvbSAndml0ZSdcbmltcG9ydCB6aXBQYWNrIGZyb20gXCJ2aXRlLXBsdWdpbi16aXAtcGFja1wiXG5pbXBvcnQgcmVhY3QgZnJvbSAnQHZpdGVqcy9wbHVnaW4tcmVhY3QnXG5cbmV4cG9ydCBkZWZhdWx0IGRlZmluZUNvbmZpZyh7XG4gIHBsdWdpbnM6IFtyZWFjdCgpLFxuICAgIHppcFBhY2soe1xuICAgICAgaW5EaXI6ICdkaXN0JywgIC8vIFx1OEY5M1x1NTE2NVx1NzY4NFx1NjU4N1x1NEVGNlx1NTkzOVx1RkYwQ1x1NUMzMVx1NjYyRlx1ODk4MVx1NjI1M1x1NTMwNVx1NzY4NFx1NjU4N1x1NEVGNlx1NTkzOVxuICAgICAgb3V0RGlyOiAnYXJjaGl2ZScsIC8vIFx1NjI1M1x1NTMwNVx1NTk3RFx1NzY4NCB6aXAgXHU2NTg3XHU0RUY2XHU2NTNFXHU1MjMwXHU1NEVBXHU0RTJBXHU2NTg3XHU0RUY2XHU1OTM5XHU0RTBCXG4gICAgICBvdXRGaWxlTmFtZTogYGRpYXJ5LTIwMjUwNDIzLnppcGAsIC8vIFx1NjI1M1x1NTMwNVx1NTk3RFx1NzY4NFx1NjU4N1x1NEVGNlx1NTQwRFxuICAgICAgcGF0aFByZWZpeDogJydcbiAgfSlcbiAgXSxcbn0pXG5cbi8vIGh0dHBzOi8vYmxvZy5jc2RuLm5ldC9LaW1CaW5nL2FydGljbGUvZGV0YWlscy8xMzU0MjY4MjhcbiJdLAogICJtYXBwaW5ncyI6ICI7QUFBK1EsU0FBUyxvQkFBb0I7QUFDNVMsT0FBTyxhQUFhO0FBQ3BCLE9BQU8sV0FBVztBQUVsQixJQUFPLHNCQUFRLGFBQWE7QUFBQSxFQUMxQixTQUFTO0FBQUEsSUFBQyxNQUFNO0FBQUEsSUFDZCxRQUFRO0FBQUEsTUFDTixPQUFPO0FBQUE7QUFBQSxNQUNQLFFBQVE7QUFBQTtBQUFBLE1BQ1IsYUFBYTtBQUFBO0FBQUEsTUFDYixZQUFZO0FBQUEsSUFDaEIsQ0FBQztBQUFBLEVBQ0Q7QUFDRixDQUFDOyIsCiAgIm5hbWVzIjogW10KfQo=

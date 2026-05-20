@@ -1,0 +1,32 @@
+directories:
+  output: release
+  buildResources: build
+productName: EasyComposer
+appId: com.yourcompany.easycomposer
+files:
+  - filter:
+      - dist/**/*
+      - main.js
+      - preload.js
+      - package.json
+win:
+  target: nsis
+  artifactName: ${productName}-Setup-${version}.${ext}
+  icon: build/icon.ico
+  extraResources:
+    - from: public
+      to: public
+    - from: dist/assets
+      to: assets
+nsis:
+  oneClick: false
+  perMachine: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: EasyComposer
+  include: build/installer.nsh
+extraMetadata:
+  main: main.js
+asar: true
+electronVersion: 35.5.1

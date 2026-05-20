@@ -1,0 +1,280 @@
+.workflow-panel {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 141, 181, 0.12);
+  box-shadow:
+    0 8px 22px rgba(29, 52, 102, 0.06),
+    0 2px 6px rgba(29, 52, 102, 0.03);
+  border-radius: 18px;
+}
+
+.top-toolbar-left,
+.top-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+}
+
+.top-center-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  min-width: 300px;
+}
+
+.brand-cluster {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.brand-link:hover {
+  opacity: 0.94;
+}
+
+.brand-link:visited {
+  color: inherit;
+}
+
+.brand-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  line-height: 1.12;
+}
+
+.brand-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1c2436;
+  letter-spacing: 0;
+}
+
+.brand-subtitle {
+  font-size: 11px;
+  color: rgba(95, 111, 143, 0.82);
+}
+
+.status-divider {
+  width: 1px;
+  height: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(125, 142, 179, 0),
+    rgba(125, 142, 179, 0.22),
+    rgba(125, 142, 179, 0)
+  );
+}
+
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.user-badge .ant-avatar {
+  width: 32px;
+  height: 32px;
+  font-size: 15px;
+  background: linear-gradient(180deg, #5e8fff 0%, #4c84ff 100%) !important;
+  box-shadow:
+    0 5px 12px rgba(76, 132, 255, 0.16),
+    0 0 0 3px rgba(76, 132, 255, 0.06);
+}
+
+.user-badge.is-empty .ant-avatar {
+  background: linear-gradient(180deg, #8ba8f5 0%, #7297f0 100%) !important;
+  box-shadow:
+    0 3px 8px rgba(114, 151, 240, 0.12),
+    0 0 0 3px rgba(114, 151, 240, 0.04);
+}
+
+.user-meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+.user-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(24, 33, 51, 0.92);
+}
+
+.user-badge.is-empty .user-name {
+  color: var(--text-soft);
+  font-weight: 500;
+}
+
+.status-chip-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--text-soft);
+  background: rgba(246, 248, 252, 0.88);
+  border: 1px solid rgba(131, 149, 189, 0.12);
+  white-space: nowrap;
+}
+
+.status-chip-label {
+  color: rgba(95, 111, 143, 0.9);
+}
+
+.status-chip-value {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.status-chip-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #18b26a;
+  box-shadow: 0 0 0 3px rgba(24, 178, 106, 0.08);
+}
+
+.status-chip.purple .status-chip-dot {
+  background: #7c5cff;
+  box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.08);
+}
+
+.status-chip.blue .status-chip-dot {
+  background: #4c84ff;
+  box-shadow: 0 0 0 3px rgba(76, 132, 255, 0.08);
+}
+
+.toolbar-btn.ant-btn {
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(130, 150, 196, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 249, 253, 0.9));
+  color: var(--text-main);
+  font-weight: 600;
+  box-shadow:
+    0 6px 16px rgba(58, 85, 139, 0.06),
+    0 2px 6px rgba(58, 85, 139, 0.03);
+  transition:
+    border-color 0.16s ease,
+    background 0.16s ease,
+    color 0.16s ease,
+    box-shadow 0.16s ease;
+}
+
+.toolbar-btn.ant-btn:hover {
+  border-color: rgba(76, 132, 255, 0.2);
+  color: var(--primary-strong) !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f7faff 100%);
+  box-shadow:
+    0 8px 18px rgba(58, 85, 139, 0.08),
+    0 2px 6px rgba(58, 85, 139, 0.04);
+}
+
+.toolbar-btn.ant-btn:active {
+  box-shadow:
+    0 4px 10px rgba(58, 85, 139, 0.06),
+    0 1px 4px rgba(58, 85, 139, 0.03);
+}
+
+.toolbar-btn.success-action.ant-btn {
+  background: linear-gradient(135deg, #17b26a 0%, #0f9f5d 100%);
+  color: #fff;
+  border: none;
+  box-shadow:
+    0 8px 18px rgba(23, 178, 106, 0.18),
+    0 2px 6px rgba(23, 178, 106, 0.08);
+}
+
+.toolbar-btn.success-action.ant-btn:hover {
+  color: #fff !important;
+  background: linear-gradient(135deg, #1ac874 0%, #12ae66 100%);
+  box-shadow:
+    0 10px 20px rgba(23, 178, 106, 0.22),
+    0 2px 6px rgba(23, 178, 106, 0.1);
+}
+
+.top-left {
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
+.top-right {
+  margin-top: 6px;
+  margin-right: 6px;
+}
+
+.top-center {
+  margin-top: 6px;
+}
+
+.workflow-brand-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 11px;
+  background: linear-gradient(180deg, rgba(82, 111, 255, 0.2) 0%, rgba(124, 92, 255, 0.1) 100%);
+  border: 1px solid rgba(112, 169, 255, 0.24);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  color: #315bdb;
+}
+
+@media (max-width: 1400px) {
+  .status-chip-group {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .top-toolbar-left,
+  .top-toolbar-right {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .toolbar-btn.ant-btn {
+    padding: 0 12px;
+    font-size: 13px;
+  }
+
+  .brand-subtitle {
+    display: none;
+  }
+
+  .top-center-status {
+    gap: 10px;
+    padding: 8px 12px;
+  }
+}

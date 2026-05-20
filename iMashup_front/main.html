@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta
+    content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net 'sha256-vvt4KWwuNr51XfE5m+hzeNEGhiOfZzG97ccfqGsPwvE=';" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <title>低代码工具简化平台</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      background-color: #16b1ff;
+      color: white;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .app {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .app>div {
+      width: 45%;
+    }
+
+    h3 {
+      color: #333;
+    }
+
+    #inputs,
+    #outputs {
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      height: 200px;
+      overflow-y: auto;
+    }
+
+    button {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      padding: 10px 20px;
+      background-color: #16b1ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #16a6ff;
+    }
+
+    .container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to EasyComposer! 👋</h1>
+  <div class="app">
+    <div>
+      <h3>输入</h3>
+      <div id="inputs"></div>
+    </div>
+    <div>
+      <h3>输出</h3>
+      <div id="outputs"></div>
+    </div>
+    <button onclick="getResult()">执行</button>
+  </div>
+
+  <script>
+    // 请求数据
+    axios.get(`http://118.25.40.159:8080/import?mesId=electron_exe`)
+      // axios.get(`http://127.0.0.1:4523/m1/6033648-0-default/getData`)
+      .then(response => {
+        const EdgesAndNodes = response.data;
+
+        const inputsContainer = document.getElementById('inputs');
+        const outputsContainer = document.getElementById('outputs');
+
+        // 清空现有内容
+        inputsContainer.innerHTML = '';
+        outputsContainer.innerHTML = '';
+
+        // 遍历 EdgesAndNodes，提取 label 为 "开始" 的 inputs 和 label 为 "结束" 的 outputs
+        EdgesAndNodes.nodes.forEach(node => {
+          const { label, inputs, outputs } = node.data;
+
+          if (label === "开始" && inputs) {
+            // 动态生成开始的 inputs
+            inputs.forEach(input => {
+              const inputContainer = document.createElement('div'); 
+              inputContainer.style.marginBottom = '10px'; 
+
+              const labelElement = document.createElement('label'); 
+              labelElement.textContent = input.name + ":  "; 
+              labelElement.setAttribute('for', input.name); 
+
+              const inputElement = document.createElement('input');
+              inputElement.type = input.type; 
+              inputElement.name = input.name;
+              inputElement.style.border = '1px solided #ccc'; 
+              inputElement.style.borderRadius = '5px'; 
+              inputElement.style.padding = '5px'; 
+
+              inputContainer.appendChild(labelElement); 
+              inputContainer.appendChild(inputElement); 
+              inputsContainer.appendChild(inputContainer); 
+            });
+          }
+
+          if (label === "结束" && outputs) {
+            // 动态生成结束的 outputs
+            outputs.forEach(output => {
+              const outputContainer = document.createElement('div'); // 包裹每个 output 的容器
+              outputContainer.style.marginBottom = '10px'; // 每行之间加一些间距
+
+              const labelElement = document.createElement('label'); // 创建 label
+              labelElement.textContent = output.name + ": "; // 设置 label 的内容为 name
+              labelElement.setAttribute('for', output.name); // 设置 for 属性，关联 input
+
+              const outputElement = document.createElement('input');
+              outputElement.type = output.type; // 设置 input 类型
+              outputElement.name = output.name;
+              outputElement.readOnly = true; // 设置为只读
+              outputElement.style.backgroundColor = '#f5f5f5'; // 设置背景色
+              outputElement.style.border = '1px solided #ccc'; // 设置边框
+              outputElement.style.borderRadius = '5px'; // 设置圆角
+              outputElement.style.padding = '5px'; // 设置内边距
+              // 鼠标放置上去为禁止更改
+              outputElement.style.cursor = 'not-allowed';
+
+              outputContainer.appendChild(labelElement); // 将 label 添加到容器
+              outputContainer.appendChild(outputElement); // 将 input 添加到容器
+              outputsContainer.appendChild(outputContainer); // 将容器添加到 outputs 容器
+            });
+          }
+        });
+      })
+      .catch(error => {
+        console.error("请求失败:", error);
+      });
+
+    function getResult() {
+
+      const inputsContainer = document.getElementById('inputs');
+      const inputs = inputsContainer.getElementsByTagName('input');
+      const inputValues = {};
+      for (let i = 0; i < inputs.length; i++) {
+        const input = inputs[i];
+        inputValues[input.name] = input.value;
+      }
+      axios.get(`http://127.0.0.1:4523/m1/6033648-0-default/getData`)
+        .then(response => {
+          const EdgesAndNodes = response.data;
+          // 替换 EdgesAndNodes 中 label 为 "开始" 的节点的 name 对应的 text 值
+          EdgesAndNodes.nodes.forEach(node => {
+            const { label, inputs, outputs } = node.data;
+            if (label === "开始" && inputs) {
+              inputs.forEach(input => {
+                if (inputValues[input.name]) {
+                  input.text = inputValues[input.name]; // 替换输入值
+                }
+              });
+            }
+          });
+
+
+          const outputsContainer = document.getElementById('outputs');
+          const outputs = outputsContainer.getElementsByTagName('input');
+          const outputValues = {};
+          const outputElements = {}; 
+          for (let i = 0; i < outputs.length; i++) {
+            const output = outputs[i];
+            outputValues[output.name] = output.value; 
+            outputElements[output.name] = output;
+          }
+          axios.post(`http://118.25.40.159:8080/url`, EdgesAndNodes, {
+            headers: {
+              'Content-Type': 'application/json'
+            }
+          }).then(response => {
+            // 替换 EdgesAndNodes 中 label 为 "结束" 的节点的 outputs 对应的 text 值
+            response.data.forEach(node => {
+              const { label, outputs } = node.data;
+              if (label === "结束" && outputs) {
+                outputs.forEach(output => {
+                  const outputElement = outputElements[output.name]; // 查找对应的 output 元素
+                  if (outputElement) {
+                    outputElement.value = output.value.text || ''; // 更新对应的值
+                  }
+                });
+              }
+            })
+          }).catch(error => {
+            console.error("请求失败:", error);
+          })
+
+        })
+        .catch(error => {
+          console.error("请求失败:", error);
+        });
+    }
+
+  </script>
+</body>
+
+</html>
