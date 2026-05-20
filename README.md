@@ -33,8 +33,6 @@ iMashup 是一个结合大语言模型、低代码开发与 Mashup 服务组合�
 
 从而降低 Mashup 应用开发门槛，提高开发效率。
 
----
-
 ## 功能特性
 
 * 可视化工作流编排
@@ -46,8 +44,6 @@ iMashup 是一个结合大语言模型、低代码开发与 Mashup 服务组合�
 * API 智能推荐
 * 工作流导入导出
 * 登录注册与历史记录管理
-
----
 
 ## 技术栈
 
@@ -81,8 +77,6 @@ iMashup 是一个结合大语言模型、低代码开发与 Mashup 服务组合�
 
 本仓库包含 iMashup 工具的完整代码及数据库文件。
 
----
-
 ### 1. iMashup_front —— 前端代码
 
 #### 运行方式
@@ -109,8 +103,6 @@ npm run dev
 * Ant Design
 * Vite
 
----
-
 ### 2. iMashup_backend —— 后端代码
 
 后端代码目录。
@@ -136,8 +128,6 @@ npm run dev
 * 导入导出
 * 会话管理
 * 与 Python 推荐服务通信
-
----
 
 ### 3. iMashup_service —— 服务推荐代码
 
@@ -174,8 +164,6 @@ API 推荐服务代码。
 * Sentence-Transformers
 * FAISS
 
----
-
 ### 4. iMashup_data —— 数据库 SQL 代码
 
 项目所使用的 MySQL 数据库文件。
@@ -193,8 +181,6 @@ API 推荐服务代码。
 * 密码
 
 与实际导入后的 MySQL 配置保持一致，以及 Mapper 层中SQL语句对应的库。
-
----
 
 ## 系统特点
 
@@ -226,8 +212,6 @@ API 推荐服务代码。
 * 数据库存储
 * 历史记录恢复
 
----
-
 ### 环境要求
 
 ### 前端
@@ -252,8 +236,6 @@ API 推荐服务代码。
 
 * Python 3.10+
 
----
-
 ## 项目启动顺序
 
 建议按照以下顺序启动：
@@ -263,8 +245,6 @@ API 推荐服务代码。
 3. 启动 iMashup_backend
 4. 启动 iMashup_service 中的 ServiceDiscovery 下的 Similarity-Search.py
 5. 启动 iMashup_front
-
----
 
 #### Contact
 Email: 1400304200@qq.com (马嘉浩), 2085417395@qq.com (鲁晓荣)
